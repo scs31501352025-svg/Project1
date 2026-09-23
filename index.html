@@ -18,6 +18,26 @@
 
     * { box-sizing: border-box; }
 
+    nav {
+      position: fixed;
+      z-index: 2;
+      top: 28px;
+      right: clamp(20px, 6vw, 72px);
+      display: flex;
+      gap: 27px;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    nav a:hover, nav a:focus-visible { color: var(--gold); }
+
     body {
       min-height: 100vh;
       margin: 0;
@@ -174,6 +194,11 @@
 </head>
 <body>
   <div class="sky" aria-hidden="true"></div>
+  <nav aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
   <main>
     <div class="orb" aria-hidden="true"></div>
     <p class="eyebrow">A new beginning</p>
